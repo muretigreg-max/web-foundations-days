@@ -3,19 +3,45 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Day 1</title>
+        <title>QuickNotes</title>
     </head>
     <body>
-        <h1>Web Foundations</h1>
+        <header>
+            <h1>QuickNotes</h1>
+            <p>Capture ideas before they disappear.</p>
 
-        <h2>Day 1: Introduction to HTML</h2>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </nav>
+        </header>
 
-        <h3>This is my first time coding html file</h3>
+        <main>
+            <section>
+                <h2>Add a note</h2>
+                <form id="note-form">
+                    <label for="note-input">New note</label>
+                    <input
+                        type="text"
+                        id="note-input"
+                        placeholder="Type a note..."
+                    />
+                    <button type="submit">Add Note</button>
+                </form>
+            </section>
 
-        <p>I am learning how to create webpages using HTML.</p>
-        <p>
-    I am also learning <strong>web development</strong> and
-    <em>how websites are built</em>.
-</p>
+            <section>
+                <h2>Your notes</h2>
+                <p id="note-count">You have 2 notes.</p>
+                <ul id="notes-list">
+                    <li>Revise HTML forms</li>
+                    <li>Push my code to GitHub</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 QuickNotes. Built during Web Foundations.</p>
+        </footer>
     </body>
 </html>
