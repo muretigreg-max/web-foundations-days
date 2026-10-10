@@ -1,0 +1,146 @@
+
+:root {
+  --bg-color: #f4f6f8;
+  --text-color: #222;
+  --card-color: #fff;
+  --border-color: #ccc;
+  --button-color: #333;
+  --button-text: #fff;
+  --muted-color: #666;
+  --warning-color: #d97706;
+  --over-color: #dc2626;
+}
+
+body.dark {
+  --bg-color: #181a1b;
+  --text-color: #f1f1f1;
+  --card-color: #25282a;
+  --border-color: #555;
+  --button-color: #e5e7eb;
+  --button-text: #181a1b;
+  --muted-color: #bbb;
+  --warning-color: #fbbf24;
+  --over-color: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+main {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 24px;
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font: inherit;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: 2px solid #5799e8;
+  outline-offset: 2px;
+}
+
+.counts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.counts p {
+  margin: 0;
+}
+
+#char-count.warning {
+  color: var(--warning-color);
+}
+
+#char-count.over {
+  color: var(--over-color);
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-color);
+  color: var(--button-text);
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:focus-visible {
+  outline: 2px solid #5799e8;
+  outline-offset: 3px;
+}
+
+footer {
+  color: var(--muted-color);
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: 16px;
+    padding: 16px;
+  }
+
+  .counts {
+    flex-direction: column;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
